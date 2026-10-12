@@ -31,3 +31,8 @@ pnpm-debug.log*
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# pnpm approve-builds generates this file; committing it triggers
+# "ERROR packages field missing or empty" on Cloudflare
+pnpm-workspace.yaml
+
