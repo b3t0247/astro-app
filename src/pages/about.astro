@@ -1,19 +1,45 @@
+---
+const pageTitle = "About Me";
+
+const identity = {
+    firstname: "John",
+    lastname: "Doe",
+    country: "United States",
+    occupation: "Technical Writer",
+    hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Python", "Writing Docs"];
+---
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astro</title>
-</head>
-<body>
-<a href="/">Home</a><br>
-<a href="/blog/">Blog</a>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <a href="/">Home</a><br>
+        <a href="/about/">About</a><br/>
+        <a href="/blog/">Blog</a>
+        <h1>{pageTitle}</h1>
+        <h2>... and my new Astro site!</h2>
 
-<h1>About Me</h1>
-<h2>... and my new Astro site!</h2>
+        <p>I am working through Astro's introductory tutorial. This is the second page on my website.</p>
 
-<p>I am working through Astro's introductory tutorial. This is the second page on my website.</p>
-
-<p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-</body>
+        <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+        <p>Here are a few facts about me:</p>
+        <ul>
+            <li>My name is {identity.firstname} {identity.lastname}.</li>
+            <li>I live in the {identity.country} and I work as a {identity.occupation}.</li>
+            {identity.hobbies.length >= 2 &&
+                <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+            }
+        </ul>
+        <p>My skills are:</p>
+    <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+    </body>
 </html>
