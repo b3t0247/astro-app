@@ -16,8 +16,10 @@
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "14.4.2",
+		"@astrojs/preact": "^6.1.1",
 		"@astrojs/rss": "^4.0.19",
-		"astro": "7.4.2"
+		"astro": "7.4.2",
+		"preact": "^11.0.2"
 	},
 	"devDependencies": {
 		"@types/node": "^26.6.5",
