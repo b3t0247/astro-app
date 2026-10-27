@@ -7,7 +7,10 @@ import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: 'passthrough',
+  }),
   site: "https://astro-app.wb2k9.workers.dev/",
+  session: false,
   integrations: [preact()],
 });
