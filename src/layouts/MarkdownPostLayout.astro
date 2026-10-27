@@ -3,16 +3,16 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-  <p>Published on: {frontmatter.pubDate.toLocaleDateString()}</p>
-  <!--<p>-->
-  <!--  Published on: {-->
-  <!--    new Date(frontmatter.pubDate).toLocaleString('en-US', {-->
-  <!--        month: '2-digit',-->
-  <!--        day: '2-digit',-->
-  <!--        year: 'numeric',-->
-  <!--    })-->
-  <!--  }-->
-  <!--</p>-->
+  <p>
+    Published on: {
+      new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
+          timeZone: 'UTC',
+          month: '2-digit',
+          day: '2-digit',
+          year: 'numeric',
+      })
+    }
+  </p>
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
