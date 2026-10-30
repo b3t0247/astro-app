@@ -1,14 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "John Doe";
+import {SITE} from "../site.config.ts";
 ---
 <BaseLayout>
     <section class="mx-auto max-w-4xl px-4 py-16 text-center">
     <h1 class="mb-2 text-5xl font-bold tracking-tight">
-        {pageTitle}
+        {SITE.name}
     </h1>
     <p class="mb-6 text-xl text-slate-500 dark:text-slate-400">
-      IT Support Engineer • Software Engineer (AI/ML)
+        {SITE.position}
     </p>
 
     <p class="mx-auto mb-8 max-w-2xl text-lg leading-relaxed">

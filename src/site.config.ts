@@ -5,7 +5,7 @@
  */
 export const SITE = {
     name: 'John Doe',
-    description: 'Personal website of John Doe',
+    position: 'IT Support Engineer • Software Engineer (AI/ML)',
     social: [
         { platform: 'Github', href: 'https://github.com/john_doe', username: 'john_doe' },
         { platform: 'X', href: 'https://x.com/john_doe', username: 'john_doe' },
