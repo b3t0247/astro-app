@@ -1,16 +1,9 @@
 ---
-import Social from './Social.astro';
+import Social from "./Social.astro";
 ---
-<style>
-  footer {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-  }
-</style>
-
 <footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="b3t0247" />
-  <Social platform="linkedin" username="withastro" />
+  <div class="mx-auto text-center flex flex-col items-center gap-4 py-8 text-sm text-slate-500 dark:text-slate-400">
+    &copy; {new Date().getFullYear()} John Doe. All rights reserved.
+  </div>
+  <Social />
 </footer>
